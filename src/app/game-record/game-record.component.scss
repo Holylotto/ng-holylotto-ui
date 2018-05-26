@@ -1,0 +1,72 @@
+.game-container {
+  background-color: #6912d6;
+  height: 100%;
+  width: 100%;
+  padding: 4% 25% 4% 25%;
+  @media screen and (max-width: 415px) {
+    padding: 4% 8% 4% 8%;
+  }
+
+  .main {
+    background-color: white;
+    border-radius: 30px;
+    min-height: 100%;
+    max-height: 100%;
+    padding: 0px;
+
+    .header-table {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      height: 60px;
+      width: 100%;
+      background-color: #f4f4f4;
+      border-radius: 30px 30px 0px 0px;
+      @media screen and (max-width: 415px) {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    
+    .column {
+        text-align: center;
+        height: 100%;
+        @media screen and (max-width: 415px) {
+            font-size: 10px;
+        }
+      }
+
+      h5 {
+        font-size: 11px;
+        display: inline-block;
+        margin-top: 25px;
+      }
+    }
+
+    .body-table {
+      cursor: pointer;
+      max-height: calc(100% - 89px);
+      overflow-y: scroll;
+      position: absolute;
+      width: 100%;
+      .row-table {
+        height: 50px;
+        padding-top: 10px;
+        border-bottom: 1px solid gray;
+        @media screen and (max-width: 415px) {
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
+          h5 {
+              font-size: 10px;
+          }
+        }
+
+        .item {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.lila {
+  color: #6912d6;
+}

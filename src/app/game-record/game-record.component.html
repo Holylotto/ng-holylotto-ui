@@ -1,0 +1,34 @@
+<div class="game-container">
+  <div class="col-md-12 main">
+    <div class="header-table">
+      <div class="column">
+        <h5>DRAW</h5>
+      </div>
+      <div class="column">
+        <h5>DATE</h5>
+      </div>
+      <div class="column">
+        <h5>WINNING COMBINATION</h5>
+      </div>
+      <div class="column">
+        <h5>JACKPOT</h5>
+      </div>
+    </div>
+    <div class="body-table">
+      <div (click)="clickRow()" class="row-table" *ngFor="let row of rows">
+        <div class="col-md-3 item">
+          <h5>{{row.draw}}</h5>
+        </div>
+        <div class="col-md-3 item">
+          <h5>{{row.date}}</h5>
+        </div>
+        <div class="col-md-3 item">
+          <h5 class="lila">{{row.combination}}</h5>
+        </div>
+        <div class="col-md-3 item">
+          <h5>{{row.jackpot}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

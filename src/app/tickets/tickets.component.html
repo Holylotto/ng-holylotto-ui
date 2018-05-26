@@ -1,0 +1,56 @@
+<nav class="ticket-nav">
+  <div class="">
+    <input placeholder="Enter your wallet address" type="text">
+  </div>
+  <div class="group pointer">
+    <div (click)="selectActive()" class="center select" [ngClass]="{'actived': active}">
+      <h5>A C T I V E</h5>
+    </div>
+    <div (click)="selectPlayed()" class="center select" [ngClass]="{'actived': played}">
+      <h5>P L A Y E D</h5>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="game-container">
+    <div class="main">
+      <div class="header-table">
+        <div class="column">
+          <h5>DRAW</h5>
+        </div>
+        <div class="column">
+          <h5>DATE</h5>
+        </div>
+        <div class="column">
+          <h5>WINNING COMBINATION</h5>
+        </div>
+        <div class="column">
+          <h5>YOUR COMBINATION</h5>
+        </div>
+        <div class="column">
+          <h5>WON</h5>
+        </div>
+      </div>
+      <div class="body-table">
+        <div (click)="clickRow()" class="row-table" *ngFor="let row of rows">
+          <div class="item">
+            <h5>{{row.draw}}</h5>
+          </div>
+          <div class="item">
+            <h5>{{row.date}}</h5>
+          </div>
+          <div class="item">
+            <h5 class="lila">{{row.winningCombination}}</h5>
+          </div>
+          <div class="item">
+            <h5 class="lila">{{row.combination}}</h5>
+          </div>
+          <div class="item">
+            <h5>{{row.won}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

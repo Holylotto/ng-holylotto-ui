@@ -1,0 +1,179 @@
+.ticket-nav {
+  height: 40px;
+  background-color: #4d4948;
+  padding: 4px 15px 4px 15px;
+  display: grid;
+  grid-template-columns: 49% 49%;
+  grid-column-gap: 2%;
+
+  @media screen and (max-width: 415px) {
+    grid-template-rows: 30px 30px;
+    grid-template-columns: 100%;
+    height: auto;
+  }
+
+  .group {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    @media screen and (max-width: 415px) {
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+
+  h5 {
+    display: inline-block;
+    font-size: 11px;
+    margin: 0px;
+    margin-top: 7px;
+  }
+
+  .select {
+    background-color: white;
+    height: 26px;
+    &.actived {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+.content {
+  height: calc(100% - 10px);
+  background-color: #6912d6;
+}
+
+.container {
+  height: 100%;
+  background-color: #6912d6;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.main {
+  background-color: white;
+  border-radius: 30px;
+  padding: 0px;
+
+  @media screen and (max-width: 765px) {
+    min-height: 46%;
+    max-height: 46%;
+  }
+  @media screen and (min-width: 766px) {
+    min-height: 55%;
+    max-height: 55%;
+  }
+  .header-table {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    height: 60px;
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 30px 30px 0px 0px;
+
+    .column {
+      text-align: center;
+      height: 100%;
+    }
+
+    h5 {
+      font-size: 11px;
+      display: inline-block;
+      margin-top: 25px;
+    }
+  }
+
+  // .body-table {
+  //   max-height: calc(100% - 89px);
+  //   overflow-y: scroll;
+  //   position: absolute;
+  //   width: 100%;
+  //   .row-table {
+  //     display: grid;
+  //     grid-template-columns: 20% 20% 20% 20% 20%;
+  //     height: 50px;
+  //     padding-top: 10px;
+  //     border-bottom: 1px solid gray;
+  //     .item {
+  //       text-align: center;
+  //       &.right {
+  //         text-align: right;
+  //       }
+  //     }
+
+  //     h5 {
+  //       font-size: 11px;
+  //     }
+  //   }
+  // }
+}
+
+.lila {
+  color: #6912d6;
+}
+
+.game-container {
+  background-color: #6912d6;
+  height: 100%;
+  width: 100%;
+  padding: 4% 25% 4% 25%;
+  @media screen and (max-width: 415px) {
+    padding: 4% 8% 4% 8%;
+  }
+
+  .main {
+    background-color: white;
+    border-radius: 30px;
+    min-height: 240px;
+    max-height: 100%;
+    padding: 0px;
+
+    .header-table {
+      display: grid;
+      grid-template-columns: 18% 16% 26% 24% 16%;
+      height: 60px;
+      width: 100%;
+      background-color: #f4f4f4;
+      border-radius: 30px 30px 0px 0px;
+
+      .column {
+        text-align: center;
+        height: 100%;
+      }
+
+      h5 {
+        font-size: 11px;
+        display: inline-block;
+        margin-top: 25px;
+        @media screen and (max-width: 415px) {
+          font-size: 9px;
+        }
+      }
+    }
+
+    .body-table {
+      cursor: pointer;
+      max-height: calc(100% - 89px);
+      overflow-y: scroll;
+      width: 100%;
+      .row-table {
+        display: grid;
+        grid-template-columns: 18% 16% 26% 24% 16%;
+        height: 50px;
+        padding-top: 10px;
+        border-bottom: 1px solid gray;
+        .item {
+          text-align: center;
+          @media screen and (max-width: 415px) {
+            h5 {
+              font-size: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

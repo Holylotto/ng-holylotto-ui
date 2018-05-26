@@ -1,0 +1,135 @@
+<div class="main-container">
+    <div class="head-mobile grid">
+        <div class="right">
+            <h5>*</h5>
+        </div>
+        <div>
+            <h5 class="text-center">J A C K P O T</h5>
+            <h5 class="text-center">1.24 ETH</h5>
+        </div>
+        <div class="left">
+            <h5>*</h5>
+        </div>
+    </div>
+    <div class="ticket"> 
+        <div class="head pd">
+            <div class="ticket-title">
+                <h5 class="title"> TICKET 1</h5>
+            </div>
+            <div class="text-center head-icon">
+                <img class="icon" src="assets/pen-01.png">
+            </div>
+            <div class="text-center head-icon">
+                <img class="icon" src="assets/trash-01.png">
+            </div>
+        </div>
+        <div class="choose">
+            <p class="text pl">Choose five characters, 0 to 9, A to F</p>
+        </div>
+        <div class="boxes pd">
+            <div #box1 (click)="changeBox(box1, input1, 1)" class="input-box-active mr">
+                <h1 #input1></h1>
+            </div>
+            <div #box2 (click)="changeBox(box2, input2, 2)" class="input-box mr">
+                <h1 #input2></h1>
+            </div>
+            <div #box3 (click)="changeBox(box3, input3, 3)" class="input-box mr">
+                    <h1 #input3></h1>
+            </div>
+            <div #box4 (click)="changeBox(box4, input4, 4)" class="input-box mr">
+                    <h1 #input4></h1>
+            </div>
+            <div #box5 (click)="changeBox(box5, input5, 5)" class="input-box mr">
+                    <h1 #input5></h1>
+            </div>
+        </div> 
+
+        <div class="mini-boxes pd">
+            <div (click)="setValue('A')" class="number-box">
+                <p>A</p>
+            </div>
+            <div (click)="setValue('B')" class="number-box">
+                <p>B</p>
+            </div>
+            <div (click)="setValue('C')" class="number-box">
+                <p>C</p>
+            </div>
+            <div (click)="setValue('D')" class="number-box">
+                <p>D</p>
+            </div>
+            <div (click)="setValue('E')" class="number-box">
+                <p>E</p>
+            </div>
+            <div (click)="setValue('F')" class="number-box">
+                <p>F</p>
+            </div>
+            <div (click)="setValue('0')" class="number-box">
+                <p>0</p>
+            </div>
+            <div (click)="setValue('1')" class="number-box">
+                <p>1</p>
+            </div>
+            <div (click)="setValue('2')" class="number-box">
+                <p>2</p>
+            </div>
+            <div (click)="setValue('3')" class="number-box">
+                <p>3</p>
+            </div>
+            <div (click)="setValue('4')" class="number-box">
+                <p>4</p>
+            </div>
+            <div (click)="setValue('5')" class="number-box">
+                <p>5</p>
+            </div>
+            <div (click)="setValue('6')" class="number-box">
+                <p>6</p>
+            </div>
+            <div (click)="setValue('7')" class="number-box">
+                <p>7</p>
+            </div>
+            <div (click)="setValue('8')" class="number-box">
+                <p>8</p>
+            </div>
+            <div (click)="setValue('9')" class="number-box">
+                <p>9</p>
+            </div>
+        </div>
+        <div class="add">
+            <div (click)="newTicket()" [ngClass]="{'btn-add disabled': !enableTicket }">NEW TICKET</div>
+            <div class="icon-footer right">
+                <img class="icon" src="assets/pen-01.png">
+            </div>
+            <div class="icon-footer left">
+                <img class="icon" src="assets/trash-01.png">
+            </div>
+        </div>
+    </div>
+    <div class="footer"> 
+        <h5>1 TICKET</h5>
+        <button #buyButton class="btn-play disabled">BUY 0.002 ETH</button>
+    </div>
+    <div id="pricepool" class="pricepool">
+        <div class="carts">
+            <div class="text-center">
+                <img class="icon jackpot" src="assets/jackpot-01.png">
+            </div>
+            <div class="text-center pd jackpot">
+                <h5 style="font-size:17px; display: inline-block;" class="title">J A C K P O T</h5>
+            </div>
+            <div class="text-center">
+                <h5 style="font-size:17px; display: inline-block;" class="title">1.24 ETH</h5>
+            </div>
+            <div class="circle"> 
+                <svg height="30" width="30">
+                    <circle cx="10" cy="10" r="6" fill="#5EF3FF" />
+                </svg>
+            </div>
+            <div class="text-center pd" style="padding-top: 0px; padding-bottom: 0px;">
+                <p id='countTickets' style="font-size:14px;" class="title">1 TICKET </p>
+            </div>
+            <div class="text-center pd" style="padding-top: 0px; padding-bottom: 0px;">
+                <button #buyButton class="btn-play disabled">BUY 0.004 ETH</button>
+            </div>
+        </div>
+    </div>
+</div>

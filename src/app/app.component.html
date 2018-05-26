@@ -1,0 +1,27 @@
+<header>
+  <div>
+    <div *ngIf="back" (click)="goBack()" class="pointer left">
+      <span class="glyphicon glyphicon-chevron-left"></span><h5>B A C K</h5>
+    </div>
+  </div>
+  <div>
+    <h5 class="main-title">{{title}}</h5>
+  </div>
+  <div *ngIf="myTickets" class="pointer" (click)="myTicketsSection()" >
+    <h5>M Y  T I C K E T S</h5>
+  </div>
+</header>
+<nav *ngIf="menu">
+  <div (click)="changeSection('rules')" class="menu" [ngClass]="{'selected': rules }">
+    <h5>RULES</h5>
+  </div>
+  <div (click)="changeSection('play')" class="menu" [ngClass]="{'selected': play }">
+    <h5>PLAY</h5>
+  </div>
+  <div (click)="changeSection('gameRecord')" class="menu" [ngClass]="{'selected': gameRecord }">
+    <h5>GAME RECORD</h5>
+  </div>
+</nav>
+<section [ngClass]="bodyClass">
+  <router-outlet></router-outlet>
+</section>
